@@ -14,7 +14,7 @@ class RegisterController extends BaseController
     public function getStudentParam($request)
     {
         $data = $request->param();//$request->param()方式可获取所有参数
-        //$data = parent::getParam($data);
+        $data = parent::getParam($data);//调用父类方法进行过滤
         if(!parent::inspectIllegalString($data['STU_Name'])){
             if(parent::inspectPhoneNum($data['STU_Phone']))
                 return $data;
@@ -33,7 +33,7 @@ class RegisterController extends BaseController
     public function getTeacherParam($request)
     {
         $data = $request->param();//$request->param()方式可获取所有参数
-        //$data = parent::getParam($data);
+        $data = parent::getParam($data);//调用父类方法进行过滤
         if(!parent::inspectIllegalString($data['TEA_Name'])){
             if(parent::inspectPhoneNum($data['TEA_Phone']))
                 return $data;

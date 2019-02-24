@@ -16,4 +16,8 @@ Route::rule('teacherlogin/:TEA_Name/:TEA_Pass','login/Teacherlogincontroller/log
 //学生注册路由
 Route::rule('studentregister/:STU_Name/:STU_Pass/:STU_Phone/[:STU_Vercode]','register/StudentregisterController/register');
 //教师注册路由
-Route::rule('teacherregister/:TEA_Name/:TEA_Pass/:TEA_Phone/[:TEA_Vercode]','login/TeacherregisterController/register');
+Route::rule('teacherregister/:TEA_Name/:TEA_Pass/:TEA_Phone/[:TEA_Vercode]','register/TeacherregisterController/register');
+//课程号查询课程
+Route::rule('search/:COU_Id','search/SearchcourseController/searchCourseID');
+//老师添加课程
+Route::rule('addcourse/:TEA_Id/:COU_Name/:COU_Dep/:COU_School/:COU_Tel','addcourse/AddCourseController/addCourse');

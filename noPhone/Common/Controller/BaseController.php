@@ -89,9 +89,19 @@ class BaseController extends Controller
             if($this->inspectIllegalString($value)){
                 $param[$key] = $this->regularString($value);
             }
-
         }
-        return $this->object_to_array($param);
+        return $this->paramTrim($param);
+    }
+
+    /**
+     * 过滤获取到的参数中的空格（前后）
+     * @param $param
+     */
+    static public function paramTrim($param){
+        //$param = array($param);
+        foreach ($param as $key => $value)
+            $param[$key] = trim($value);
+        return $param;
     }
 
     /**

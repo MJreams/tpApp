@@ -12,16 +12,15 @@ class Studentlogincontroller extends LoginController
     {
         //if($request->isPost()){
             //获取用户名和密码 $data[username,password]
-            $data = Logincontroller::getParam($request);
+            $data = parent::getParam($request);
+
             //实例化学生登录模块
             $Student = new StudentModel;
             //获取能否登陆的结果
-        //dump($data);
+        //var_dump($data);
             $result = $Student->login($data['STU_Name'],$data['STU_Pass']);
             return $result;
-        //}
 
-       // return $this->fetch();
 
     }
 }

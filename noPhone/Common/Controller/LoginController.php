@@ -17,7 +17,7 @@ class LoginController extends BaseController
             //$data[$password] = trim($request->param($password));
         //}
         $data = $request->param();//$request->param()方式可获取所有参数
-        //$data = parent::getParam($data);
+        $data = parent::getParam($data);
         return $data;
     }
 }

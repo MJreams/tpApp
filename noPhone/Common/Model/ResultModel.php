@@ -1,11 +1,11 @@
 <?php
 
 namespace app\Common\Model;
-
+//返回请求信息
 
 use app\Common\Model\BaseModel;
 
-class AbstractLoginModel extends BaseModel
+class ResultModel extends BaseModel
 {
     /**
      * 返回result
