@@ -10,6 +10,7 @@ class CourseModel extends BaseModel
     protected $table = 'NP_Course';
 
     /**
+     * 查询课程信息
      * @param $data $data里面只有一个数据 COU_Id
      * @return bool|string 信息
      */
@@ -43,6 +44,21 @@ class CourseModel extends BaseModel
         //使用insertGetId方法，在存储数据的同时返回数据的自增键值
         $COU_Id = $Course->insertGetId($data);
         return $COU_Id;
+    }
+
+    /**
+     * @param $COU_Id
+     * @return bool
+     */
+    static public function delCourse($COU_Id){
+
+        $Course = self::get($COU_Id);
+        //如果该数据存在则删除并返回true
+        if($Course != null){
+            $Course->delete();
+            return true;
+        }
+        return false;
     }
 
 

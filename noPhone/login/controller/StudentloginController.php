@@ -6,7 +6,7 @@ use app\Common\Controller\LoginController;
 use app\Common\Model\StudentLoginModel as StudentModel;
 use think\Request;
 
-class Studentlogincontroller extends LoginController
+class StudentLogincontroller extends LoginController
 {
     public function login(Request $request)
     {

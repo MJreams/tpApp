@@ -6,7 +6,7 @@ use app\Common\Controller\LoginController;
 use app\Common\Model\TeacherLoginModel as TeacherModel;
 use think\Request;
 
-class TeacherloginController extends LoginController
+class TeacherLoginController extends LoginController
 {
     public function login(Request $request)
     {
