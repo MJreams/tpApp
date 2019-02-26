@@ -1,3 +1,5 @@
+noPhone接口说明文档：
+
 ## 登陆：
 
 教师：http://tp.lovey0u.cn/teacherlogin/TEA/Name/TEA_Pass
