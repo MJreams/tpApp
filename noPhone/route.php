@@ -27,3 +27,8 @@ Route::rule('delcourse/:COU_Id','addcourse/AddCourseController/delCourse');
 Route::rule('addmodule/:COU_Id/:MOD_Name','addmodule/AddModuleController/addmodule');
 //删除课程内的单元
 Route::rule('delmodule/:MOD_Id','addmodule/AddModuleController/delmodule');
+//上传文件
+Route::rule('uploadFile','upload/UploadFileController/uploadFile');
+
+//接收图片
+//Route::rule('receiveImage','upload/UploadImageController/receiveImage');
